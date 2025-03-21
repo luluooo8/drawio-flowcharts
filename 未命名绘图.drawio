@@ -1,69 +1,81 @@
-<mxfile host="app.diagrams.net" modified="2025-03-22T15:00:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="xxxxxx" version="22.1.0" type="device">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.1.1">
   <diagram id="diagramId" name="资产赎回状态机流程图">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="701" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <!-- 开始节点 -->
-        <mxCell id="start" value="" style="shape=circle;fillColor=#009688;size=15" vertex="1" parent="1">
-          <mxGeometry x="150" y="50" as="geometry"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="" style="shape=circle;fillColor=#009688;size=15" parent="1" vertex="1">
+          <mxGeometry x="150" y="50" as="geometry" />
         </mxCell>
-        <!-- 创建赎回任务状态 -->
-        <mxCell id="create_redemption_task" value="点击【资产赎回及回购】，打开【资产赎回】界面，点击创建赎回任务" style="shape=rounded;fillColor=#e0f2f1;strokeColor=#009688;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" vertex="1" parent="1">
-          <mxGeometry x="150" y="120" width="300" height="70" as="geometry"/>
+        <mxCell id="create_redemption_task" value="点击【资产赎回及回购】，打开【资产赎回】界面，点击创建赎回任务" style="shape=rounded;fillColor=#e0f2f1;strokeColor=#009688;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="150" y="40" width="300" height="70" as="geometry" />
         </mxCell>
-        <!-- 选择上传方式状态 -->
-        <mxCell id="select_upload_method" value="选择单笔/批量上传，点击【发起赎回】" style="shape=rounded;fillColor=#e0f2f1;strokeColor=#009688;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" vertex="1" parent="1">
-          <mxGeometry x="150" y="210" width="300" height="70" as="geometry"/>
+        <mxCell id="select_upload_method" value="选择单笔/批量上传，点击【发起赎回】" style="shape=rounded;fillColor=#e0f2f1;strokeColor=#009688;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="150" y="180" width="300" height="70" as="geometry" />
         </mxCell>
-        <!-- 待确认状态（分支节点） -->
-        <mxCell id="await_confirmation" value="上传文件/发起任务后，「待执行」，系统计算赎回金额并通知，状态「待确认」，可操作【确认】或【取消】" style="shape=diamond;fillColor=#fff59d;strokeColor=#ffeb3b;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" vertex="1" parent="1">
-          <mxGeometry x="150" y="310" width="300" height="80" as="geometry"/>
+        <mxCell id="cancelled_state" value="点击【取消】，任务取消，状态「已取消」，不可再操作" style="shape=rounded;fillColor=#ff8a80;strokeColor=#f44336;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="630" y="325" width="300" height="70" as="geometry" />
         </mxCell>
-        <!-- 已取消状态 -->
-        <mxCell id="cancelled_state" value="点击【取消】，任务取消，状态「已取消」，不可再操作" style="shape=rounded;fillColor=#ff8a80;strokeColor=#f44336;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" vertex="1" parent="1">
-          <mxGeometry x="500" y="310" width="300" height="70" as="geometry"/>
+        <mxCell id="select_redemption_type" value="确认赎回任务，选「资产赎回」或「资金赎回」，点击【确认】，状态「待赎回」" style="shape=rounded;fillColor=#e0f2f1;strokeColor=#009688;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="150" y="490" width="300" height="80" as="geometry" />
         </mxCell>
-        <!-- 选择赎回方式状态 -->
-        <mxCell id="select_redemption_type" value="确认赎回任务，选「资产赎回」或「资金赎回」，点击【确认】，状态「待赎回」" style="shape=rounded;fillColor=#e0f2f1;strokeColor=#009688;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" vertex="1" parent="1">
-          <mxGeometry x="150" y="430" width="300" height="80" as="geometry"/>
+        <mxCell id="redemption_operation" value="点击【赎回】，账务解标。状态直接「赎回成功」" style="shape=rounded;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="150" y="660" width="300" height="100" as="geometry" />
         </mxCell>
-        <!-- 赎回操作状态 -->
-        <mxCell id="redemption_operation" value="点击【赎回】，账务解标。「资金赎回」直接「赎回成功」；「资产赎回」先「待打标」，任务完成后「赎回成功」" style="shape=rounded;fillColor=#e0f2f1;strokeColor=#009688;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" vertex="1" parent="1">
-          <mxGeometry x="150" y="530" width="300" height="100" as="geometry"/>
+        <mxCell id="redemption_success" value="赎回任务执行成功，结束不可操作" style="shape=rounded;fillColor=#c8e6c9;strokeColor=#4caf50;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="150" y="830" width="300" height="70" as="geometry" />
         </mxCell>
-        <!-- 赎回成功状态 -->
-        <mxCell id="redemption_success" value="赎回任务执行成功，结束不可操作" style="shape=rounded;fillColor=#c8e6c9;strokeColor=#4caf50;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" vertex="1" parent="1">
-          <mxGeometry x="150" y="660" width="300" height="70" as="geometry"/>
+        <mxCell id="end" value="" style="shape=square;fillColor=#000000;size=15" parent="1" vertex="1">
+          <mxGeometry x="150" y="730" as="geometry" />
         </mxCell>
-        <!-- 结束节点 -->
-        <mxCell id="end" value="" style="shape=square;fillColor=#000000;size=15" vertex="1" parent="1">
-          <mxGeometry x="150" y="730" as="geometry"/>
+        <mxCell id="link2" value="选择并发起" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" parent="1" source="create_redemption_task" target="select_upload_method" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- 连接线及事件标注 -->
-        <mxCell id="link1" value="进入流程" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" edge="1" parent="1" source="start" target="create_redemption_task">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="link3" value="等待计算确认" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="select_upload_method" target="Hda6cBYFfRgA13X4G13a-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="320" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="link2" value="选择并发起" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" edge="1" parent="1" source="create_redemption_task" target="select_upload_method">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="link4" value="用户点击取消" style="edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=0;entryY=0.5;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" parent="1" target="cancelled_state" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="360" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="link3" value="等待计算确认" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" edge="1" parent="1" source="select_upload_method" target="await_confirmation">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="link5" value="用户点击确认" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Hda6cBYFfRgA13X4G13a-5" target="select_redemption_type" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="400" as="sourcePoint" />
+            <mxPoint x="300" y="505" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="link4" value="用户点击取消" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" edge="1" parent="1" source="await_confirmation" target="cancelled_state">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="link6" value="确认资金赎回" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" parent="1" source="select_redemption_type" target="redemption_operation" edge="1">
+          <mxGeometry x="-0.1111" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="link5" value="用户点击确认" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" edge="1" parent="1" source="await_confirmation" target="select_redemption_type">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="link7" value="执行赎回" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" parent="1" source="redemption_operation" target="redemption_success" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="link6" value="确认赎回方式" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" edge="1" parent="1" source="select_redemption_type" target="redemption_operation">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Hda6cBYFfRgA13X4G13a-2" value="点击【赎回】，账务解标。&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;状态&lt;/span&gt;先「待打标」，任务完成后「赎回成功」&lt;/div&gt;" style="shape=rounded;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;whiteSpace=wrap;html=1;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="630" y="495" width="300" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="link7" value="执行赎回" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" edge="1" parent="1" source="redemption_operation" target="redemption_success">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Hda6cBYFfRgA13X4G13a-3" value="确认资产赎回" style="edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=0;entryY=0.5;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" edge="1" parent="1" target="Hda6cBYFfRgA13X4G13a-2">
+          <mxGeometry x="0.0083" relative="1" as="geometry">
+            <mxPoint x="450" y="530" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="link8" value="任务结束" style="edgeStyle=orthogonalEdgeStyle;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12" edge="1" parent="1" source="redemption_success" target="end">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Hda6cBYFfRgA13X4G13a-5" value="上传文件/发起任务后，「待执行」，系统计算赎回金额并通知，状态「待确认」，可操作【确认】或【取消】" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#ffeb3b;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#fff59d;" vertex="1" parent="1">
+          <mxGeometry x="142.5" y="322.5" width="315" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Hda6cBYFfRgA13X4G13a-7" value="执行赎回" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;strokeWidth=1.5;html=1;labelBackgroundColor=#ffffff;labelBorderColor=#333333;labelBorder=1;labelVerticalAlign=middle;labelAlign=center;fontSize=12;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Hda6cBYFfRgA13X4G13a-2" target="redemption_success">
+          <mxGeometry x="-0.5397" relative="1" as="geometry">
+            <mxPoint x="360" y="780" as="sourcePoint" />
+            <mxPoint x="830" y="850" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="780" y="865" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
