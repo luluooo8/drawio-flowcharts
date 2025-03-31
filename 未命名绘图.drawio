@@ -1,45 +1,66 @@
-<mxfile host="app.diagrams.net" modified="2025-03-31T00:00:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="xxxxxxxx" version="15.5.4" type="device">
-  <diagram id="xxxxxxxx" name="Page-1">
-    <mxGraphModel dx="1162" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="app.diagrams.net" type="github">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="专项计划资产结构原型图">
+    <mxGraphModel dx="946" dy="504" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <!-- 输入参数区域 -->
-        <mxCell id="2" value="输入参数区域" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f0f0f0;strokeColor=#000000;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelBackgroundColor=#ffffff;labelBorderColor=#000000;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="500" height="100" as="geometry"/>
+        <!-- 基础单元格模板 -->
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 输入区域 -->
+        <mxCell id="inputArea" value="输入参数区域" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="40" width="600" height="150" />
         </mxCell>
-        <mxCell id="3" value="专项计划" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelBackgroundColor=#ffffff;labelBorderColor=#000000;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="40" y="50" width="120" height="30" as="geometry"/>
+        
+        <!-- 专项计划下拉框 -->
+        <mxCell id="projectSelect" value="专项计划: [下拉选择框]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="inputArea">
+          <mxGeometry y="30" width="600" height="30" />
         </mxCell>
-        <mxCell id="4" value="下拉框" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelBackgroundColor=#ffffff;labelBorderColor=#000000;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="160" y="50" width="180" height="30" as="geometry"/>
+        
+        <!-- 封包日期 -->
+        <mxCell id="packageDate" value="封包日期: [2023-01-01] (置灰不可编辑)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="inputArea">
+          <mxGeometry y="60" width="600" height="30" />
         </mxCell>
-        <mxCell id="5" value="封包日期" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f0f0f0;strokeColor=#000000;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelBackgroundColor=#ffffff;labelBorderColor=#000000;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="40" y="90" width="100" height="30" as="geometry"/>
+        
+        <!-- 切片日期 -->
+        <mxCell id="sliceDate" value="切片日期: [日期选择器] (需大于封包日期)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="inputArea">
+          <mxGeometry y="90" width="600" height="30" />
         </mxCell>
-        <mxCell id="6" value="显示框" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f0f0f0;strokeColor=#000000;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelBackgroundColor=#ffffff;labelBorderColor=#000000;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="140" y="90" width="120" height="30" as="geometry"/>
+        
+        <!-- 查询按钮 -->
+        <mxCell id="queryBtn" value="[查询按钮]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4D90FE;fontColor=#FFFFFF;" vertex="1" parent="inputArea">
+          <mxGeometry x="500" y="30" width="80" height="30" />
         </mxCell>
-        <mxCell id="7" value="切片日期" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelBackgroundColor=#ffffff;labelBorderColor=#000000;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="300" y="90" width="100" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="8" value="日历控件" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelBackgroundColor=#ffffff;labelBorderColor=#000000;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="400" y="90" width="120" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="9" value="查询按钮" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#007bff;strokeColor=#007bff;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelColor=#ffffff;labelBackgroundColor=#007bff;labelBorderColor=#007bff;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="540" y="90" width="80" height="30" as="geometry"/>
-        </mxCell>
+        
         <!-- 数据展示区域 -->
-        <mxCell id="10" value="数据展示区域" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f0f0f0;strokeColor=#000000;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelBackgroundColor=#ffffff;labelBorderColor=#000000;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="20" y="130" width="960" height="400" as="geometry"/>
+        <mxCell id="dataArea" value="数据展示区域" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="220" width="600" height="500" />
         </mxCell>
-        <mxCell id="11" value="封包日期数据" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelBackgroundColor=#ffffff;labelBorderColor=#000000;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="40" y="160" width="440" height="360" as="geometry"/>
+        
+        <!-- 封包日期数据 -->
+        <mxCell id="packageData" value="封包日期: 2024-08-27 日终" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dataArea">
+          <mxGeometry y="30" width="280" height="30" />
         </mxCell>
-        <mxCell id="12" value="切片日期数据" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;opacity=1;align=center;verticalAlign=middle;aspect=fixed;rotatable=0;resizeParent=0;resizeLast=0;labelBackgroundColor=#ffffff;labelBorderColor=#000000;labelBorderStyle=solid;labelBorderWidth=1;labelVerticalAlign=middle;labelAlign=center;" vertex="1" parent="1">
-          <mxGeometry x="520" y="160" width="440" height="360" as="geometry"/>
+        
+        <!-- 资产池信息 -->
+        <mxCell id="assetInfo" value="&lt;b&gt;资产池信息&lt;/b&gt;&lt;br&gt;当前余额: 1,468,750,052.72&lt;br&gt;放款本金: 1,498,583,440.00" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="dataArea">
+          <mxGeometry y="60" width="280" height="60" />
         </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
+        
+        <!-- 产品类型表格 -->
+        <mxCell id="productTable" value="&lt;table border='1' style='width:100%'&gt;&lt;tr&gt;&lt;th colspan='4'&gt;产品类型分布&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;产品号&lt;/th&gt;&lt;th&gt;未偿本金&lt;/th&gt;&lt;th&gt;占比&lt;/th&gt;&lt;th&gt;放款本金&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;小额&lt;/td&gt;&lt;td&gt;1,339,941,740&lt;/td&gt;&lt;td&gt;91%&lt;/td&gt;&lt;td&gt;1,357,568,560&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;中额&lt;/td&gt;&lt;td&gt;128,808,312&lt;/td&gt;&lt;td&gt;9%&lt;/td&gt;&lt;td&gt;141,014,880&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="html=1;verticalAlign=top;" vertex="1" parent="dataArea">
+          <mxGeometry y="130" width="280" height="120" />
+        </mxCell>
+        
+        <!-- 风险等级表格 -->
+        <mxCell id="riskTable" value="&lt;table border='1' style='width:100%'&gt;&lt;tr&gt;&lt;th colspan='4'&gt;风险等级分布&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;风险等级&lt;/th&gt;&lt;th&gt;未偿本金&lt;/th&gt;&lt;th&gt;占比&lt;/th&gt;&lt;th&gt;放款本金&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;551,249,943&lt;/td&gt;&lt;td&gt;38%&lt;/td&gt;&lt;td&gt;569,340,720&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;389,198,644&lt;/td&gt;&lt;td&gt;26%&lt;/td&gt;&lt;td&gt;395,099,580&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="html=1;verticalAlign=top;" vertex="1" parent="dataArea">
+          <mxGeometry y="260" width="280" height="150" />
+        </mxCell>
+        
+        <!-- 切片日期数据 -->
+        <mxCell id="sliceData" value="切片日期: 2025-02-18 日终" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dataArea">
+          <mxGeometry x="300" y="30" width="280" height="30" />
+        </mxCell>
+        
+        <!-- 切片资产池信息 -->
+        <mxCell id="sliceAssetInfo" value="&lt;b&gt;资产池信息&lt;/b&gt;&lt;br&gt;当前余额: 1,447,371,231.26&lt;br&gt;放款本金: 3,238,556,360.00" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="dataArea">
+          <mxGeometry x
