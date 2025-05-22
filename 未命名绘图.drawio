@@ -1,66 +1,98 @@
-<mxfile host="app.diagrams.net" type="github">
-  <diagram id="C5RBs43oDa-KdzZeNtuy" name="专项计划资产结构原型图">
-    <mxGraphModel dx="946" dy="504" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <!-- 基础单元格模板 -->
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        
-        <!-- 输入区域 -->
-        <mxCell id="inputArea" value="输入参数区域" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="100" y="40" width="600" height="150" />
-        </mxCell>
-        
-        <!-- 专项计划下拉框 -->
-        <mxCell id="projectSelect" value="专项计划: [下拉选择框]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="inputArea">
-          <mxGeometry y="30" width="600" height="30" />
-        </mxCell>
-        
-        <!-- 封包日期 -->
-        <mxCell id="packageDate" value="封包日期: [2023-01-01] (置灰不可编辑)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="inputArea">
-          <mxGeometry y="60" width="600" height="30" />
-        </mxCell>
-        
-        <!-- 切片日期 -->
-        <mxCell id="sliceDate" value="切片日期: [日期选择器] (需大于封包日期)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="inputArea">
-          <mxGeometry y="90" width="600" height="30" />
-        </mxCell>
-        
-        <!-- 查询按钮 -->
-        <mxCell id="queryBtn" value="[查询按钮]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4D90FE;fontColor=#FFFFFF;" vertex="1" parent="inputArea">
-          <mxGeometry x="500" y="30" width="80" height="30" />
-        </mxCell>
-        
-        <!-- 数据展示区域 -->
-        <mxCell id="dataArea" value="数据展示区域" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="100" y="220" width="600" height="500" />
-        </mxCell>
-        
-        <!-- 封包日期数据 -->
-        <mxCell id="packageData" value="封包日期: 2024-08-27 日终" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dataArea">
-          <mxGeometry y="30" width="280" height="30" />
-        </mxCell>
-        
-        <!-- 资产池信息 -->
-        <mxCell id="assetInfo" value="&lt;b&gt;资产池信息&lt;/b&gt;&lt;br&gt;当前余额: 1,468,750,052.72&lt;br&gt;放款本金: 1,498,583,440.00" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="dataArea">
-          <mxGeometry y="60" width="280" height="60" />
-        </mxCell>
-        
-        <!-- 产品类型表格 -->
-        <mxCell id="productTable" value="&lt;table border='1' style='width:100%'&gt;&lt;tr&gt;&lt;th colspan='4'&gt;产品类型分布&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;产品号&lt;/th&gt;&lt;th&gt;未偿本金&lt;/th&gt;&lt;th&gt;占比&lt;/th&gt;&lt;th&gt;放款本金&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;小额&lt;/td&gt;&lt;td&gt;1,339,941,740&lt;/td&gt;&lt;td&gt;91%&lt;/td&gt;&lt;td&gt;1,357,568,560&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;中额&lt;/td&gt;&lt;td&gt;128,808,312&lt;/td&gt;&lt;td&gt;9%&lt;/td&gt;&lt;td&gt;141,014,880&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="html=1;verticalAlign=top;" vertex="1" parent="dataArea">
-          <mxGeometry y="130" width="280" height="120" />
-        </mxCell>
-        
-        <!-- 风险等级表格 -->
-        <mxCell id="riskTable" value="&lt;table border='1' style='width:100%'&gt;&lt;tr&gt;&lt;th colspan='4'&gt;风险等级分布&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;风险等级&lt;/th&gt;&lt;th&gt;未偿本金&lt;/th&gt;&lt;th&gt;占比&lt;/th&gt;&lt;th&gt;放款本金&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;551,249,943&lt;/td&gt;&lt;td&gt;38%&lt;/td&gt;&lt;td&gt;569,340,720&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B&lt;/td&gt;&lt;td&gt;389,198,644&lt;/td&gt;&lt;td&gt;26%&lt;/td&gt;&lt;td&gt;395,099,580&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="html=1;verticalAlign=top;" vertex="1" parent="dataArea">
-          <mxGeometry y="260" width="280" height="150" />
-        </mxCell>
-        
-        <!-- 切片日期数据 -->
-        <mxCell id="sliceData" value="切片日期: 2025-02-18 日终" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="dataArea">
-          <mxGeometry x="300" y="30" width="280" height="30" />
-        </mxCell>
-        
-        <!-- 切片资产池信息 -->
-        <mxCell id="sliceAssetInfo" value="&lt;b&gt;资产池信息&lt;/b&gt;&lt;br&gt;当前余额: 1,447,371,231.26&lt;br&gt;放款本金: 3,238,556,360.00" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="dataArea">
-          <mxGeometry x
+<mxfile>
+    <diagram name="第 1 页" id="0">
+        <mxGraphModel dx="1426" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <!-- 主表格容器（细边框） -->
+                <mxCell id="table" value="" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=none;strokeColor=#CCCCCC;strokeWidth=1;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="100" width="900" height="500"/>
+                </mxCell>
+                
+                <!-- 标题行 -->
+                <mxCell id="titleRow" value="预警指标监控表" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;fontStyle=1;fontFamily=Arial;" vertex="1" parent="table">
+                    <mxGeometry y="0" width="900" height="45"/>
+                </mxCell>
+                
+                <!-- 列标题行（淡蓝色背景+深蓝色文字） -->
+                <mxCell id="columnHeaders" value="" style="whiteSpace=wrap;html=1;align=center;strokeColor=#CCCCCC;fillColor=#E6F2FF;" vertex="1" parent="table">
+                    <mxGeometry y="45" width="900" height="40"/>
+                </mxCell>
+                
+                <!-- 列标题内容 -->
+                <mxCell id="col1" value="指标名称" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=1;fontFamily=Arial;fontColor=#003366;" vertex="1" parent="columnHeaders">
+                    <mxGeometry x="0" width="180" height="40"/>
+                </mxCell>
+                <mxCell id="col2" value="计算口径" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=1;fontFamily=Arial;fontColor=#003366;" vertex="1" parent="columnHeaders">
+                    <mxGeometry x="180" width="250" height="40"/>
+                </mxCell>
+                <mxCell id="col3" value="触发预警-临界值1（示例）" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=1;fontFamily=Arial;fontColor=#003366;" vertex="1" parent="columnHeaders">
+                    <mxGeometry x="430" width="140" height="40"/>
+                </mxCell>
+                <mxCell id="col4" value="⚠️ 预警等级" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=1;fontFamily=Arial;fontColor=#003366;" vertex="1" parent="columnHeaders">
+                    <mxGeometry x="570" width="100" height="40"/>
+                </mxCell>
+                <mxCell id="col5" value="触发预警-临界值2（示例）" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=1;fontFamily=Arial;fontColor=#003366;" vertex="1" parent="columnHeaders">
+                    <mxGeometry x="670" width="140" height="40"/>
+                </mxCell>
+                <mxCell id="col6" value="⚠️ 预警等级" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=1;fontFamily=Arial;fontColor=#003366;" vertex="1" parent="columnHeaders">
+                    <mxGeometry x="810" width="90" height="40"/>
+                </mxCell>
+                
+                <!-- 数据行1（白色背景） -->
+                <mxCell id="row1" value="" style="whiteSpace=wrap;html=1;align=center;strokeColor=#CCCCCC;fillColor=#FFFFFF;" vertex="1" parent="table">
+                    <mxGeometry y="85" width="900" height="40"/>
+                </mxCell>
+                <mxCell id="row1_col1" value="可变报警占比" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;" vertex="1" parent="row1">
+                    <mxGeometry x="0" width="180" height="40"/>
+                </mxCell>
+                <mxCell id="row1_col2" value="(浮动服务费+自持利息折现)/SPV收益" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;" vertex="1" parent="row1">
+                    <mxGeometry x="180" width="250" height="40"/>
+                </mxCell>
+                <mxCell id="row1_col3" value="&lt;25%" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;" vertex="1" parent="row1">
+                    <mxGeometry x="430" width="140" height="40"/>
+                </mxCell>
+                <mxCell id="row1_col4" value="黄" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;fontColor=#FF9900;" vertex="1" parent="row1">
+                    <mxGeometry x="570" width="100" height="40"/>
+                </mxCell>
+                <mxCell id="row1_col5" value="&lt;20%" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;" vertex="1" parent="row1">
+                    <mxGeometry x="670" width="140" height="40"/>
+                </mxCell>
+                <mxCell id="row1_col6" value="红" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;fontColor=#FF0000;" vertex="1" parent="row1">
+                    <mxGeometry x="810" width="90" height="40"/>
+                </mxCell>
+
+                <!-- 数据行2（灰色条纹背景） -->
+                <mxCell id="row2" value="" style="whiteSpace=wrap;html=1;align=center;strokeColor=#CCCCCC;fillColor=#F9F9F9;" vertex="1" parent="table">
+                    <mxGeometry y="125" width="900" height="40"/>
+                </mxCell>
+                <mxCell id="row2_col1" value="可变报警占比（含超额）" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;" vertex="1" parent="row2">
+                    <mxGeometry x="0" width="180" height="40"/>
+                </mxCell>
+                <mxCell id="row2_col2" value="(浮动服务费+超额报酬+自持利息折现)/SPV收益" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;" vertex="1" parent="row2">
+                    <mxGeometry x="180" width="250" height="40"/>
+                </mxCell>
+                <mxCell id="row2_col3" value="&lt;30%" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;" vertex="1" parent="row2">
+                    <mxGeometry x="430" width="140" height="40"/>
+                </mxCell>
+                <mxCell id="row2_col4" value="黄" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;fontColor=#FF9900;" vertex="1" parent="row2">
+                    <mxGeometry x="570" width="100" height="40"/>
+                </mxCell>
+                <mxCell id="row2_col5" value="&lt;25%" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;" vertex="1" parent="row2">
+                    <mxGeometry x="670" width="140" height="40"/>
+                </mxCell>
+                <mxCell id="row2_col6" value="红" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;fontColor=#FF0000;" vertex="1" parent="row2">
+                    <mxGeometry x="810" width="90" height="40"/>
+                </mxCell>
+
+                <!-- 更多数据行...（可根据需要继续添加） -->
+
+                <!-- 脚注 -->
+                <mxCell id="footer" value="注：黄色预警表示需要关注，红色预警表示需要立即处理" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontFamily=Arial;fontColor=#666666;" vertex="1" parent="table">
+                    <mxGeometry y="450" width="900" height="30"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
