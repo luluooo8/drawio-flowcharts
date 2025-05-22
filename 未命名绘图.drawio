@@ -1,34 +1,125 @@
 <mxfile>
-  <diagram name="第 1 页" id="0">
-    <mxGraphModel dx="1426" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram name="预警监控看板" id="0">
+    <mxGraphModel dx="1642" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <!-- 基础单元格 -->
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         
-        <!-- 主表格容器 -->
-        <mxCell id="table" value="" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=none;strokeColor=#CCCCCC;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="100" width="900" height="500" as="geometry" />
+        <!-- 主容器 -->
+        <mxCell id="mainContainer" value="" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;strokeColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="100" y="50" width="1000" height="650" as="geometry" />
         </mxCell>
 
-        <!-- 标题行 -->
-        <mxCell id="titleRow" value="预警指标监控表" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;fontStyle=1;fontFamily=Arial;" vertex="1" parent="table">
-          <mxGeometry width="900" height="45" as="geometry" />
+        <!-- 标题区 -->
+        <mxCell id="titleSection" value="SPV资产预警监控看板" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;fontSize=16;fontStyle=1;fontFamily=微软雅黑;" vertex="1" parent="mainContainer">
+          <mxGeometry width="1000" height="60" as="geometry" />
         </mxCell>
 
-        <!-- 列标题行 -->
-        <mxCell id="columnHeaders" value="" style="whiteSpace=wrap;html=1;align=center;strokeColor=#CCCCCC;fillColor=#E6F2FF;" vertex="1" parent="table">
-          <mxGeometry y="45" width="900" height="40" as="geometry" />
+        <!-- 阈值控制面板 -->
+        <mxCell id="controlPanel" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#CCCCCC;" vertex="1" parent="mainContainer">
+          <mxGeometry y="60" width="1000" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 阈值滑块1 -->
+        <mxCell id="thresholdSlider1" value="黄色预警阈值" style="shape=ellipse;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="controlPanel">
+          <mxGeometry x="50" y="20" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="slider1Control" value="25%" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="controlPanel">
+          <mxGeometry x="180" y="20" width="60" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 阈值滑块2 -->
+        <mxCell id="thresholdSlider2" value="红色预警阈值" style="shape=ellipse;fillColor=#ffcccc;strokeColor=#ff6666;" vertex="1" parent="controlPanel">
+          <mxGeometry x="300" y="20" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="slider2Control" value="20%" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="controlPanel">
+          <mxGeometry x="430" y="20" width="60" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 数据表格容器 -->
+        <mxCell id="dataTable" value="" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;strokeColor=#CCCCCC;" vertex="1" parent="mainContainer">
+          <mxGeometry y="140" width="1000" height="470" as="geometry" />
+        </mxCell>
+
+        <!-- 表格列标题 -->
+        <mxCell id="tableHeader" value="" style="whiteSpace=wrap;html=1;align=center;strokeColor=#CCCCCC;fillColor=#E6F2FF;" vertex="1" parent="dataTable">
+          <mxGeometry width="1000" height="50" as="geometry" />
         </mxCell>
 
         <!-- 列标题内容 -->
-        <mxCell id="col1" value="指标名称" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=1;fontFamily=Arial;fontColor=#003366;" vertex="1" parent="columnHeaders">
-          <mxGeometry width="180" height="40" as="geometry" />
+        <mxCell id="h1" value="指标名称" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontFamily=微软雅黑;fontColor=#003366;" vertex="1" parent="tableHeader">
+          <mxGeometry width="200" height="50" as="geometry" />
         </mxCell>
-        
-        <!-- 其余列标题和数据行... -->
-        <!-- 注意：为保持简洁，这里只展示关键部分，完整结构参考之前的示例 -->
+        <mxCell id="h2" value="计算口径" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontFamily=微软雅黑;fontColor=#003366;" vertex="1" parent="tableHeader">
+          <mxGeometry x="200" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="当前值" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontFamily=微软雅黑;fontColor=#003366;" vertex="1" parent="tableHeader">
+          <mxGeometry x="500" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="h4" value="预警状态" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontFamily=微软雅黑;fontColor=#003366;" vertex="1" parent="tableHeader">
+          <mxGeometry x="620" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="h5" value="操作" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontFamily=微软雅黑;fontColor=#003366;" vertex="1" parent="tableHeader">
+          <mxGeometry x="740" width="260" height="50" as="geometry" />
+        </mxCell>
 
+        <!-- 数据行1 - 可变报警占比 -->
+        <mxCell id="row1" value="" style="whiteSpace=wrap;html=1;align=center;strokeColor=#CCCCCC;fillColor=#FFFFFF;" vertex="1" parent="dataTable">
+          <mxGeometry y="50" width="1000" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c1" value="可变报警占比" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontFamily=微软雅黑;" vertex="1" parent="row1">
+          <mxGeometry width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c2" value="(浮动服务费+自持利息折现)/SPV收益" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontFamily=微软雅黑;" vertex="1" parent="row1">
+          <mxGeometry x="200" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c3" value="22%" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontFamily=微软雅黑;" vertex="1" parent="row1">
+          <mxGeometry x="500" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c4" value="黄色预警" style="text;strokeColor=none;fillColor=#fff2cc;align=center;verticalAlign=middle;fontSize=11;fontFamily=微软雅黑;fontColor=#d6b656;" vertex="1" parent="row1">
+          <mxGeometry x="620" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c5" value="" style="shape=button;rounded=1;html=1;fillColor=#4D90FE;strokeColor=#3079ED;fontColor=#FFFFFF;" vertex="1" parent="row1">
+          <mxGeometry x="740" width="120" height="30" as="geometry" />
+          <mxCell value="调整阈值" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontFamily=微软雅黑;" vertex="1" parent="r1c5" connectable="0">
+            <mxGeometry width="120" height="30" as="geometry" />
+          </mxCell>
+        </mxCell>
+
+        <!-- 数据行2 - 可变报警占比（含超额） -->
+        <mxCell id="row2" value="" style="whiteSpace=wrap;html=1;align=center;strokeColor=#CCCCCC;fillColor=#F9F9F9;" vertex="1" parent="dataTable">
+          <mxGeometry y="100" width="1000" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c1" value="可变报警占比（含超额）" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontFamily=微软雅黑;" vertex="1" parent="row2">
+          <mxGeometry width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c2" value="(浮动服务费+超额报酬+自持利息折现)/SPV收益" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontFamily=微软雅黑;" vertex="1" parent="row2">
+          <mxGeometry x="200" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c3" value="28%" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontFamily=微软雅黑;" vertex="1" parent="row2">
+          <mxGeometry x="500" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c4" value="黄色预警" style="text;strokeColor=none;fillColor=#fff2cc;align=center;verticalAlign=middle;fontSize=11;fontFamily=微软雅黑;fontColor=#d6b656;" vertex="1" parent="row2">
+          <mxGeometry x="620" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c5" value="" style="shape=button;rounded=1;html=1;fillColor=#4D90FE;strokeColor=#3079ED;fontColor=#FFFFFF;" vertex="1" parent="row2">
+          <mxGeometry x="740" width="120" height="30" as="geometry" />
+          <mxCell value="调整阈值" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontFamily=微软雅黑;" vertex="1" parent="r2c5" connectable="0">
+            <mxGeometry width="120" height="30" as="geometry" />
+          </mxCell>
+        </mxCell>
+
+        <!-- 更多数据行...（包含所有10个指标） -->
+        <!-- 数据行3-10的结构与行1-2类似，此处省略... -->
+
+        <!-- 状态指示灯 -->
+        <mxCell id="statusLight" value="" style="shape=ellipse;fillColor=#4CAF50;strokeColor=#388E3C;" vertex="1" parent="mainContainer">
+          <mxGeometry x="800" y="20" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="statusText" value="监控中" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontFamily=微软雅黑;" vertex="1" parent="mainContainer">
+          <mxGeometry x="835" y="20" width="100" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
